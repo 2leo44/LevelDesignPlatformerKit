@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="27_1ueyk"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
-exposure_multiplier = 0.129
+exposure_multiplier = 0.013
 auto_exposure_scale = 0.75
 dof_blur_far_distance = 0.01
 
@@ -46,6 +46,14 @@ unique_name_in_owner = true
 environment = ExtResource("1_ml6ee")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
+[node name="Sun" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(-0.873738, -0.372601, 0.31265, -0.0295243, 0.68223, 0.730541, -0.4855, 0.629071, -0.607091, 0, 2.37399, 0)
+light_color = Color(1, 0.945098, 0.772549, 1)
+light_energy = 9.697
+light_indirect_energy = 1.647
+shadow_enabled = true
+shadow_opacity = 0.75
+
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_lp5jg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.328842, 0.529943, 1.46379)
 view = NodePath("../View")
@@ -62,13 +70,6 @@ current = true
 fov = 40.0
 
 [node name="World" type="Node3D" parent="."]
-
-[node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.873738, -0.372601, 0.31265, -0.0224715, 0.673024, 0.739279, -0.485877, 0.638911, -0.59642, 0, 2.37399, 0)
-light_color = Color(1, 0.945098, 0.772549, 1)
-light_energy = 6.01
-shadow_enabled = true
-shadow_opacity = 0.75
 
 [node name="HUD" type="CanvasLayer" parent="." groups=["HUD"]]
 process_mode = 3
