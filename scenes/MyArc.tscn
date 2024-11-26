@@ -1,11 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://dtfdifymqarwl"]
+[gd_scene load_steps=19 format=3 uid="uid://dtfdifymqarwl"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ml6ee"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_lp5jg"]
 [ext_resource type="Script" path="res://scripts/view.gd" id="3_hlo70"]
 [ext_resource type="PackedScene" uid="uid://ciki0s3ncfulb" path="res://models/props/block-snow-large.glb" id="10_e3335"]
-[ext_resource type="PackedScene" uid="uid://c5vgh1v6juur0" path="res://models/core_models/platform-medium.glb" id="11_2w2ub"]
-[ext_resource type="PackedScene" uid="uid://d0p70yd7of0xo" path="res://objects/block_snow_corner_overhang_low_2.tscn" id="12_s2ixx"]
+[ext_resource type="PackedScene" uid="uid://bca4l5fdc13un" path="res://models/props/fence-broken.glb" id="11_alohg"]
+[ext_resource type="PackedScene" uid="uid://ca3x0hnr25xhm" path="res://models/props/fence-straight.glb" id="12_g5pla"]
+[ext_resource type="PackedScene" uid="uid://b7w3bwm7iuk8c" path="res://models/props/tree-pine-snow-small.glb" id="13_xd0iv"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="22_tsnwn"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_qwneo"]
 [ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_nmh7s"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dm50aa4qogm65" path="res://sprites/button_rectangle_depth_gloss.png" id="27_1ueyk"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
+exposure_multiplier = 0.129
 auto_exposure_scale = 0.75
 dof_blur_far_distance = 0.01
 
@@ -35,6 +37,8 @@ font_size = 42
 shadow_color = Color(0, 0, 0, 0.376471)
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fg8wd"]
+
 [node name="Main" type="Node3D"]
 
 [node name="Environment" type="WorldEnvironment" parent="."]
@@ -43,7 +47,7 @@ environment = ExtResource("1_ml6ee")
 camera_attributes = SubResource("CameraAttributesPractical_u8ojw")
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_lp5jg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0413646, 3.35608, 0.4483)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.328842, 0.529943, 1.46379)
 view = NodePath("../View")
 
 [node name="View" type="Node3D" parent="." node_paths=PackedStringArray("target") groups=["View"]]
@@ -60,7 +64,9 @@ fov = 40.0
 [node name="World" type="Node3D" parent="."]
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)
+transform = Transform3D(-0.873738, -0.372601, 0.31265, -0.0224715, 0.673024, 0.739279, -0.485877, 0.638911, -0.59642, 0, 2.37399, 0)
+light_color = Color(1, 0.945098, 0.772549, 1)
+light_energy = 6.01
 shadow_enabled = true
 shadow_opacity = 0.75
 
@@ -176,13 +182,52 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="block-snow-large2" parent="." instance=ExtResource("10_e3335")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201397, -0.198011, 0.441617)
+transform = Transform3D(28380.3, 0, 0, 0, 0.160482, 15.302, 0, -0.0016162, 1519.42, -1.07922, -0.156375, 1.05825)
 
-[node name="platform-medium" parent="." instance=ExtResource("11_2w2ub")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043403, -1.07915, 0.0474544)
+[node name="StaticBody3D" type="StaticBody3D" parent="block-snow-large2"]
 
-[node name="block-snow-corner-overhang-low2" parent="." instance=ExtResource("12_s2ixx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876051, 0, 0.643891)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-large2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.28882e-05, 0, 1.13687e-13, 1, 0, 0.748297, 7.9599e-07)
+shape = SubResource("BoxShape3D_fg8wd")
+
+[node name="fence-broken2" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.418989, 0.0849362, 1.51115, 0.132351, 1.91362, -0.0406418, -1.65776, 0.131311, -0.38518, 2.04581, -0.0694729, 0.644108)
+
+[node name="fence-straight2" parent="." instance=ExtResource("12_g5pla")]
+transform = Transform3D(0.0524889, -0.0642145, 1.5584, -0.149765, 1.91142, 0.0561681, -1.70764, -0.16961, 0.0429752, 2.40544, -0.198372, 2.2734)
+
+[node name="fence-broken3" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.378732, 0.228016, 1.51016, -0.0841939, 1.9007, -0.206924, -1.67054, -0.147488, -0.331944, 2.59075, 0.0665807, 4.14061)
+
+[node name="fence-broken4" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.357366, 0.263676, 1.51064, -0.00989004, 1.90061, -0.220939, -1.67732, -0.0673848, -0.32055, 3.19782, 0.0202792, 7.67173)
+
+[node name="fence-broken5" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.427339, 0.246552, 1.49745, -0.0838915, 1.89741, -0.226044, -1.65878, -0.159477, -0.374345, 3.56205, 0.0202793, 9.52607)
+
+[node name="fence-straight3" parent="." instance=ExtResource("12_g5pla")]
+transform = Transform3D(-0.112891, 0.0327715, 1.55639, 0.158277, 1.91169, -0.017074, -1.70394, 0.175403, -0.104701, 2.83261, -0.0370874, 5.80479)
+
+[node name="fence-broken6" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.0933946, 0.27679, -1.54137, 0.0392799, 1.89973, 0.223239, 1.712, -0.0284873, -0.089208, -2.98761, -0.168694, 8.81656)
+
+[node name="fence-straight4" parent="." instance=ExtResource("12_g5pla")]
+transform = Transform3D(0.34605, 0.463805, -1.48071, 0.185093, 1.83883, 0.416027, 1.66949, -0.300003, 0.260795, -2.96848, -0.260801, 10.5469)
+
+[node name="fence-broken7" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(0.053273, -0.103551, -1.55698, 0.146003, 1.91051, -0.0797484, 1.70794, -0.16009, 0.0553813, -2.8616, 0.0202793, 6.96419)
+
+[node name="fence-broken8" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.310827, 0, -1.53416, 0, 1.92, 0, 1.6866, 0, -0.282735, -2.78438, 0.0175061, 3.66175)
+
+[node name="fence-broken9" parent="." instance=ExtResource("11_alohg")]
+transform = Transform3D(-0.420044, 0.000300581, -1.51249, -0.145971, 1.91258, 0.033793, 1.65635, 0.168629, -0.380583, -2.30792, -0.139217, 1.86973)
+
+[node name="fence-straight5" parent="." instance=ExtResource("12_g5pla")]
+transform = Transform3D(0.171412, 0.00692173, -1.55218, 0.0033612, 1.91998, 0.00595931, 1.70641, -0.00447718, 0.155907, -2.85868, -0.0909063, 5.22092)
+
+[node name="tree-pine-snow-small2" parent="." instance=ExtResource("13_xd0iv")]
+transform = Transform3D(3.495, 0, 0, 0, 3.495, 0, 0, 0, 3.495, -4.05166, -4.76837e-07, 13.3702)
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
