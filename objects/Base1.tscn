@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1um12mkde1jb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880mu"]
+albedo_color = Color(0.458405, 0.458405, 0.458405, 1)
+
+[node name="door-rotate2"]
+
+[node name="door-rotate" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_880mu")
+
+[node name="door" parent="door-rotate" index="0"]
+transform = Transform3D(-0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, -0.173648, -0.19942, 7.33766e-17, 2.16573e-14)
+visible = false

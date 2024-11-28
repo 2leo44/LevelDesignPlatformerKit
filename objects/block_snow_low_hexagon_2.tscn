@@ -1,23 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://do7q7opcyiyo2"]
+[gd_scene load_steps=4 format=3 uid="uid://do7q7opcyiyo2"]
 
 [ext_resource type="PackedScene" uid="uid://ctk2udps6rnxw" path="res://models/props/block-snow-low-hexagon_Blue.glb" id="1_ncb5h"]
-[ext_resource type="Texture2D" uid="uid://0odt7cvj574e" path="res://models/core_models/Textures/colormap.png" id="2_8btpg"]
+[ext_resource type="Texture2D" uid="uid://cj6hq47s6fgou" path="res://models/props/block-grass-curve-half.png" id="2_lwdl0"]
 
-[sub_resource type="Texture2DRD" id="Texture2DRD_v5k0d"]
-
-[sub_resource type="Texture2DRD" id="Texture2DRD_7rbaq"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qbtf"]
-albedo_color = Color(0, 0.807843, 1, 0.827451)
-albedo_texture = ExtResource("2_8btpg")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6vwk"]
+albedo_color = Color(0.0908795, 0.536161, 0.538969, 0.839216)
+metallic = 0.38
+metallic_specular = 0.0
+roughness = 0.16
+emission = Color(0.0901961, 0.537255, 0.537255, 1)
+normal_texture = ExtResource("2_lwdl0")
+clearcoat_enabled = true
+ao_light_affect = 0.29
 subsurf_scatter_enabled = true
-subsurf_scatter_strength = 0.39
-subsurf_scatter_texture = SubResource("Texture2DRD_v5k0d")
-subsurf_scatter_transmittance_enabled = true
-subsurf_scatter_transmittance_color = Color(1, 0.384314, 0, 1)
-subsurf_scatter_transmittance_texture = SubResource("Texture2DRD_7rbaq")
+subsurf_scatter_strength = 1.0
+refraction_scale = -0.84
+refraction_texture_channel = 2
 
 [node name="block-snow-low-hexagon2" instance=ExtResource("1_ncb5h")]
 
 [node name="block-snow-low-hexagon" parent="." index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_6qbtf")
+surface_material_override/0 = SubResource("StandardMaterial3D_u6vwk")
