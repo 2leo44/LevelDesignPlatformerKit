@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d0f5xfyn1x1a1"
-path="res://.godot/imported/tree-snow.glb-b916727c5f40338a126f7b96a6000366.scn"
+uid="uid://ctk2udps6rnxw"
+path="res://.godot/imported/block-snow-low-hexagon_Blue.glb-b3282acb1e01c98bc8af3911791557e4.scn"
 
 [deps]
 
-source_file="res://models/props/tree-snow.glb"
-dest_files=["res://.godot/imported/tree-snow.glb-b916727c5f40338a126f7b96a6000366.scn"]
+source_file="res://models/props/block-snow-low-hexagon_Blue.glb"
+dest_files=["res://.godot/imported/block-snow-low-hexagon_Blue.glb-b3282acb1e01c98bc8af3911791557e4.scn"]
 
 [params]
 

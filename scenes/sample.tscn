@@ -339,6 +339,8 @@ transform = Transform3D(0.254998, -0.790241, 0.557222, 0.328837, 0.612797, 0.718
 light_energy = 16.0
 spot_range = 2965.48
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SpotLight3D"]
+
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_coin_collected"]
 [connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
 [connection signal="pressed" from="HUD/Control/PlayAgainButton" to="HUD" method="_on_play_again_button_pressed"]
