@@ -1459,18 +1459,26 @@ transform = Transform3D(0.863, 0, 0, 0, 1.918, 0, 0, 0, 0.863, -28.5361, 0.90441
 transform = Transform3D(0.985, 0, 0, 0, 0.985, 0, 0, 0, 0.985, 0, 0.455773, 0)
 
 [node name="coin-bronze2" parent="." instance=ExtResource("39_xj6qt")]
-transform = Transform3D(0.561497, -0.262599, -0.552793, 0.253449, 0.588259, -0.184953, 0.127139, -0.0129404, 2.81006, -26.4031, 1.1503, 32.7563)
+transform = Transform3D(0.572182, -0.262402, -0.235566, 0.253449, 0.588259, -0.184953, 0.0636474, 0.0164623, 2.85421, -26.4031, 1.18513, 32.7563)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="coin-bronze2"]
-transform = Transform3D(-0.948062, -1.27539, -0.0160566, -1.14248, 0.847002, 0.616075, -0.0288913, 0.0723268, -0.351232, -0.00948715, 0.234583, 0.0619984)
+transform = Transform3D(-0.996894, -1.22497, -0.181549, -1.20133, 0.931177, 0.313611, -0.0303794, 0.0749553, -0.33893, 0.0275917, 0.224926, 0.0612268)
 light_color = Color(0.709023, 0.518405, 7.70092e-07, 1)
 light_energy = 21.215
 light_indirect_energy = 5.013
+light_specular = 4.04
 shadow_enabled = true
-spot_range = 6.35
-spot_attenuation = -1.52
+spot_range = 8.17
+spot_attenuation = -1.32
 spot_angle = 24.73
-spot_angle_attenuation = 1.36604
+spot_angle_attenuation = 1.56917
+
+[node name="OmniLight3D" type="OmniLight3D" parent="coin-bronze2"]
+transform = Transform3D(1.58975, 3.88362e-07, -4.17233e-07, 7.12462e-08, 1.55198, 4.5076e-07, -3.72529e-09, 2.32831e-08, 0.348446, 0.0124779, 0.205942, 0.0393524)
+light_color = Color(0.709804, 0.517647, 0, 1)
+light_energy = 12.798
+light_volumetric_fog_energy = 16.0
+omni_range = 0.138164
 
 [node name="coin-bronze3" parent="." instance=ExtResource("39_xj6qt")]
 transform = Transform3D(0.177554, 0.265913, 2.48541, 0.339491, 0.436876, -1.43208, -0.498898, 0.391922, -0.0899699, -28.5356, 2.69783, 35.4818)
@@ -1485,6 +1493,14 @@ spot_range = 6.906
 spot_attenuation = -0.61
 spot_angle = 30.18
 spot_angle_attenuation = 1.31951
+
+[node name="OmniLight3D" type="OmniLight3D" parent="coin-bronze3"]
+transform = Transform3D(1.58975, -1.60933e-06, -1.6652e-06, 4.76837e-07, 1.55198, -2.79397e-08, -1.49012e-08, -5.30854e-08, 0.348447, 0.040287, 0.24572, 0.0719604)
+light_color = Color(0.996078, 0.2, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 6.657
+omni_range = 0.261
 
 [node name="coin-bronze4" parent="." instance=ExtResource("39_xj6qt")]
 transform = Transform3D(-0.0265399, 0.395485, 2.26246, 0.339491, 0.436876, -1.43208, -0.528886, 0.260584, -1.03279, 0.8038, 4.03041, 27.3274)
