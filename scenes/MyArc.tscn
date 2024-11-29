@@ -161,6 +161,7 @@ process_mode = 3
 transform = Transform3D(0.707107, -0.298836, 0.640856, 0, 0.906308, 0.422618, -0.707107, -0.298836, 0.640856, -4.76837e-07, -9.53674e-07, -4.76837e-07)
 script = ExtResource("3_hlo70")
 target = NodePath("../../Player")
+camera_angle_min = -180.0
 
 [node name="Camera" type="Camera3D" parent="Environment/View"]
 transform = Transform3D(1, 0, 0, 0, 1, -5.36442e-07, 0, 2.08616e-07, 1, 0, 1.533e-06, 10)
