@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brtyummnd58r"]
+
+[ext_resource type="PackedScene" uid="uid://bcelcc2hak4kr" path="res://models/prototyping/models/column-low.glb" id="1_eks3y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxnsa"]
+albedo_color = Color(0.792157, 1, 1, 0.184314)
+roughness = 0.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+refraction_enabled = true
+refraction_scale = 0.01
+
+[node name="column-low2" instance=ExtResource("1_eks3y")]
+
+[node name="column-low" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_nxnsa")
