@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8vgfvst0our8"]
+
+[ext_resource type="PackedScene" uid="uid://bcelcc2hak4kr" path="res://models/prototyping/models/column-low.glb" id="1_ne8p4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_il4iy"]
+albedo_color = Color(1, 0.270588, 0, 1)
+metallic = 0.65
+metallic_specular = 0.42
+normal_enabled = true
+subsurf_scatter_strength = 1.0
+
+[node name="column-low2" instance=ExtResource("1_ne8p4")]
+
+[node name="column-low" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_il4iy")
