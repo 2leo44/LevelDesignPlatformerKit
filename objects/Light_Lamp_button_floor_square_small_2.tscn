@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuablbtwp33r1"]
+
+[ext_resource type="PackedScene" uid="uid://be3qkaqhw4eqr" path="res://models/prototyping/models/button-floor-square-small.glb" id="1_xetjl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxd1c"]
+albedo_color = Color(0.966069, 0.0793286, 0.0503516, 1)
+metallic = 0.11
+metallic_specular = 0.54
+roughness = 0.02
+emission_enabled = true
+emission = Color(100, 0, 0, 1)
+ao_enabled = true
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.84
+refraction_enabled = true
+grow = true
+
+[node name="button-floor-square-small2" instance=ExtResource("1_xetjl")]
+
+[node name="button" parent="button-floor-square-small" index="0"]
+material_override = SubResource("StandardMaterial3D_sxd1c")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, -0.26892, -0.963163, 0, 0.963163, -0.26892, 0, 0.311309, 0)
+shadow_enabled = true
+spot_range = 2945.67

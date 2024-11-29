@@ -118,6 +118,9 @@ close_app={
 [rendering]
 
 global_illumination/voxel_gi/quality=1
+environment/ssao/quality=3
+environment/ssil/quality=3
+environment/screen_space_reflection/roughness_quality=3
 environment/subsurface_scattering/subsurface_scattering_quality=3
 anti_aliasing/quality/screen_space_aa=1
 occlusion_culling/use_occlusion_culling=true

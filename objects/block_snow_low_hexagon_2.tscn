@@ -20,4 +20,5 @@ refraction_texture_channel = 2
 [node name="block-snow-low-hexagon2" instance=ExtResource("1_ncb5h")]
 
 [node name="block-snow-low-hexagon" parent="." index="0"]
+gi_mode = 2
 surface_material_override/0 = SubResource("StandardMaterial3D_u6vwk")
