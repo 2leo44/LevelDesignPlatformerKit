@@ -3,12 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://be3qkaqhw4eqr" path="res://models/prototyping/models/button-floor-square-small.glb" id="1_xetjl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxd1c"]
-albedo_color = Color(0.966069, 0.0793286, 0.0503516, 1)
+albedo_color = Color(0.964706, 0.313726, 0.0509804, 1)
 metallic = 0.11
 metallic_specular = 0.54
 roughness = 0.02
 emission_enabled = true
-emission = Color(100, 0, 0, 1)
+emission = Color(100, 0.262745, 0, 1)
+emission_energy_multiplier = 5.9
 ao_enabled = true
 subsurf_scatter_enabled = true
 subsurf_scatter_strength = 0.84

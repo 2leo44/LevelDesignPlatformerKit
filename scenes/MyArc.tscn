@@ -1619,8 +1619,29 @@ transform = Transform3D(-3.16345, 0, -1.36404, 0, 3.445, 0, 1.36404, 0, -3.16345
 [node name="trap-spikes" parent="." instance=ExtResource("31_ifs70")]
 transform = Transform3D(90.81, 0, 0, 0, 0.11, 0, 0, 0, 116.06, -38.0326, 0.097551, 30.3659)
 
-[node name="trap-spikes2" parent="." instance=ExtResource("31_ifs70")]
-transform = Transform3D(1.35415, 0, 0, 0, 2.61585, 0, 0, 0, 1.74027, 1.05535, 0.930793, 50.3278)
+[node name="Glow-trap-spikes2" parent="." instance=ExtResource("31_ifs70")]
+transform = Transform3D(0.918022, 0, 0, 0, 0.926237, 0, 0, 0, 0.882182, 2.30052, 0.930793, 49.201)
+
+[node name="Glow-trap-spikes3" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.739618, 0, 0)
+
+[node name="Glow-trap-spikes4" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.746307, 0, 0)
+
+[node name="Glow-trap-spikes5" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49632, 0, 0)
+
+[node name="Glow-trap-spikes6" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.746307, 0, 0.754791)
+
+[node name="Glow-trap-spikes7" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49632, 0, 0.754791)
+
+[node name="Glow-trap-spikes8" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.738378, 0, 0.754791)
+
+[node name="Glow-trap-spikes9" parent="Glow-trap-spikes2" instance=ExtResource("31_ifs70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0116384, 0, 0.754791)
 
 [node name="block-snow-corner-overhang-low5" parent="." instance=ExtResource("27_qoov3")]
 transform = Transform3D(3.54411, 0, 3.37643, 0, 4.895, 0, -3.37643, 0, 3.54411, -5.19021, -0.10808, 63.1107)
@@ -3270,7 +3291,7 @@ transform = Transform3D(1, 7.45058e-08, 0, -4.65661e-10, 1, 0, 0, 0, 1, -2.04822
 transform = Transform3D(1, 7.45058e-08, 0, -4.65661e-10, 1, 0, 0, 0, 1, -0.178411, -1.01742, 20.2635)
 
 [node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_lp5jg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.95947, 1.52878, 12.158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48168, 2.39671, 51.0941)
 view = NodePath("../Environment/View")
 
 [node name="platform-falling11" parent="." instance=ExtResource("33_7phwd")]
