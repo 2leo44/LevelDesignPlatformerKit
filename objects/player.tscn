@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dl2ed4gkybggf"]
+[gd_scene load_steps=12 format=3 uid="uid://dl2ed4gkybggf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ffboj"]
 [ext_resource type="PackedScene" uid="uid://c0e27836xgmhi" path="res://objects/character.tscn" id="2_nero3"]
 [ext_resource type="Texture2D" uid="uid://8ggihh27mlrr" path="res://sprites/blob_shadow.png" id="3_0c7wt"]
 [ext_resource type="ArrayMesh" uid="uid://deu06eho4c74" path="res://vfx_meshes/dust.res" id="4_mvhqy"]
 [ext_resource type="AudioStream" uid="uid://cydjn1ct3hps2" path="res://sounds/walking.ogg" id="5_ics1s"]
+[ext_resource type="PackedScene" uid="uid://wkgij5gtmeky" path="res://models/props/coin-silver.glb" id="6_72wym"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gdq8c"]
 radius = 0.3
@@ -45,6 +46,25 @@ shape = SubResource("CapsuleShape3D_gdq8c")
 
 [node name="antenna" parent="Character/character/root/torso" index="2"]
 material_override = SubResource("StandardMaterial3D_li4al")
+
+[node name="coin-silver2" parent="Character/character/root/torso" index="3" instance=ExtResource("6_72wym")]
+transform = Transform3D(0.411337, 0, 0, 0, 0.406957, 0.117832, 0, -0.0181168, 2.64686, -0.130838, 0.569539, 0.0736689)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Character/character/root/torso" index="4"]
+transform = Transform3D(-1, -3.81333e-09, 8.73395e-08, 0, 0.999049, 0.0436194, -8.74228e-08, 0.0436194, -0.999049, -0.130838, 0.674624, 0.0901652)
+light_color = Color(0.615686, 0.6, 0.337255, 1)
+light_energy = 500.0
+light_indirect_energy = 9.866
+shadow_enabled = true
+spot_range = 575.453
+spot_angle = 15.39
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Character/character/root/torso" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 1.49012e-08, 1, -0.130487, 0.659788, 0.231696)
+light_color = Color(0.615686, 0.6, 0.337255, 1)
+light_energy = 500.0
+shadow_enabled = true
+omni_range = 0.067
 
 [node name="ButtonPresserArea3D" type="Area3D" parent="Character"]
 collision_layer = 4
