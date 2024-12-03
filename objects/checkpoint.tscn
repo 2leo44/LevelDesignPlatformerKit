@@ -1,16 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyvet7kb6y80r"]
+[gd_scene load_steps=4 format=3 uid="uid://cyvet7kb6y80r"]
 
 [ext_resource type="Script" path="res://scripts/check_point.gd" id="1_tieuc"]
 [ext_resource type="PackedScene" uid="uid://deenxvd7c27m2" path="res://models/props/flag.glb" id="2_ulkp2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30d5v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ekyr4"]
 size = Vector3(1, 1.5, 1)
 
 [node name="checkpoint" type="Node3D"]
 script = ExtResource("1_tieuc")
-jewel_material = SubResource("StandardMaterial3D_30d5v")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
