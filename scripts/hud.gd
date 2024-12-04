@@ -69,3 +69,7 @@ func _on_play_again_button_pressed() -> void:
 	level_complete.visible = false
 	coins_label.text = str(0)
 	get_tree().reload_current_scene()
+
+
+func _on_player_coin_collected() -> void:
+	pass # Replace with function body.

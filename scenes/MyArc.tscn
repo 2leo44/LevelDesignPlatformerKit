@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://dtfdifymqarwl"]
+[gd_scene load_steps=154 format=3 uid="uid://dtfdifymqarwl"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ml6ee"]
 [ext_resource type="PackedScene" uid="uid://dl2ed4gkybggf" path="res://objects/player.tscn" id="2_lp5jg"]
@@ -17,9 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://r4s3jk2sk838" path="res://models/prototyping/models/stairs-diagonal-small-narrow.glb" id="21_cggyn"]
 [ext_resource type="PackedScene" uid="uid://do54lrwccotke" path="res://models/prototyping/models/door-sliding-double-wide.glb" id="21_oxsbb"]
 [ext_resource type="Script" path="res://scripts/hud.gd" id="22_tsnwn"]
-[ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="23_qwneo"]
 [ext_resource type="Script" path="res://scripts/door2.gd" id="24_ek81a"]
-[ext_resource type="LabelSettings" uid="uid://daohhjonjrdx8" path="res://themes/label_settings.tres" id="24_nmh7s"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="25_gfkaw"]
 [ext_resource type="PackedScene" uid="uid://ctk2udps6rnxw" path="res://models/props/block-snow-low-hexagon_Blue.glb" id="26_ml7va"]
 [ext_resource type="Theme" uid="uid://d3avl0mr4r87l" path="res://themes/default_theme.tres" id="26_qtskk"]
@@ -36,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://cjgfjucbpxtlj" path="res://models/props/ladder.glb" id="36_upd28"]
 [ext_resource type="PackedScene" uid="uid://duf6tmubs17m3" path="res://models/props/sign.glb" id="37_3uemf"]
 [ext_resource type="PackedScene" uid="uid://duin1ro4h021f" path="res://models/prototyping/models/pipe-half-section.glb" id="38_7gto7"]
-[ext_resource type="Script" path="res://objects/dither_obstacle.gd" id="39_2ubgb"]
 [ext_resource type="PackedScene" uid="uid://dhxok27jxvik8" path="res://objects/flag.tscn" id="39_l01om"]
 [ext_resource type="PackedScene" uid="uid://mcxt080e1h25" path="res://models/props/coin-bronze.glb" id="39_xj6qt"]
 [ext_resource type="PackedScene" uid="uid://dwh4cpo7lnwya" path="res://models/props/block-snow-overhang-large-slope-steep-narrow.glb" id="40_em31y"]
@@ -67,9 +64,12 @@
 [ext_resource type="PackedScene" uid="uid://cmkdwrjcbf2o1" path="res://models/props/arrow.glb" id="64_6ugxm"]
 [ext_resource type="PackedScene" uid="uid://cvbt1sowk4xx3" path="res://objects/Snow_plant_2.tscn" id="65_aeijv"]
 [ext_resource type="PackedScene" uid="uid://dmequtx2oso1f" path="res://models/props/rocks.glb" id="66_nhdtf"]
+[ext_resource type="AudioStream" uid="uid://dpei5ggw046nc" path="res://objects/zapsplat_nature_wind_cold_blizzard_snow_storm_001_85967.mp3" id="66_w24od"]
 [ext_resource type="PackedScene" uid="uid://cte7gcfhvygfi" path="res://models/props/crate.glb" id="67_mujh5"]
 [ext_resource type="PackedScene" uid="uid://dgwnhphsmk556" path="res://models/props/barrel.glb" id="68_h2mq8"]
 [ext_resource type="PackedScene" uid="uid://cyvet7kb6y80r" path="res://objects/checkpoint.tscn" id="69_6k4v0"]
+[ext_resource type="PackedScene" uid="uid://b7yv016l57x1q" path="res://models/props/mushrooms.glb" id="69_8qnlb"]
+[ext_resource type="PackedScene" uid="uid://ctfjj2573fbex" path="res://models/props/plant.glb" id="70_3ob8e"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_u8ojw"]
 exposure_multiplier = 0.013
@@ -98,7 +98,7 @@ shadow_offset = Vector2(2, 2)
 size = Vector3(2.07056, 1.06689, 1.75101)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r4222"]
-size = Vector3(9.08203, 3.12135, 0.353134)
+size = Vector3(7.13379, 3.12135, 0.353134)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bt70a"]
 size = Vector3(1.60303, 2.49914, 0.164917)
@@ -120,6 +120,9 @@ size = Vector3(1.62109, 2.92639, 0.315552)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u8tn5"]
 size = Vector3(1.64648, 2.54382, 0.145996)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3hj4o"]
+size = Vector3(1.85156, 2.67438, 0.137817)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_we0se"]
 size = Vector3(7.82861, 3.56781, 0.213379)
@@ -170,10 +173,10 @@ size = Vector3(7.63043, 6.43256, 0.280151)
 size = Vector3(0.40033, 1.36255, 0.387924)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3vqsm"]
-size = Vector3(0.843384, 0.533203, 0.278809)
+size = Vector3(0.843384, 1.29987, 0.278809)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vbxe5"]
-size = Vector3(1, 1.11133, 2.91614)
+size = Vector3(0.805176, 2.8042, 9.56898)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1xkjl"]
 size = Vector3(0.227539, 0.748749, 1.40417)
@@ -214,9 +217,6 @@ size = Vector3(0.249146, 1.51172, 1.05762)
 [sub_resource type="BoxShape3D" id="BoxShape3D_obbrj"]
 size = Vector3(0.254211, 1.49133, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_uagnl"]
-size = Vector3(0.500488, 1.4552, 1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_atfl0"]
 size = Vector3(0.315002, 1.50629, 1)
 
@@ -225,6 +225,9 @@ size = Vector3(0.147705, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xe2ut"]
 size = Vector3(0.154282, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vho2h"]
+size = Vector3(0.38562, 0.47583, 1.30051)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ltc6x"]
 size = Vector3(0.590698, 1.40039, 1)
@@ -247,8 +250,14 @@ size = Vector3(0.278076, 1.50378, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxskb"]
 size = Vector3(0.18689, 1.50146, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2di3x"]
+size = Vector3(0.398926, 1.7251, 3.52179)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_x4vfa"]
 size = Vector3(0.63623, 1.49622, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cuhj5"]
+size = Vector3(0.299805, 0.510254, 1.32513)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uqbb4"]
 size = Vector3(0.981445, 1, 0.962891)
@@ -266,6 +275,27 @@ size = Vector3(4.13519, 2.89185, 21.7729)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_71lb1"]
 size = Vector3(19.5404, 3.29858, 12.2524)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxang"]
+size = Vector3(0.662964, 1.55963, 1.11853)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gthel"]
+size = Vector3(0.590942, 1.01855, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bja25"]
+size = Vector3(0.623047, 1.49927, 1.07727)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wr4g"]
+size = Vector3(0.712891, 1.54285, 0.998657)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iwdue"]
+size = Vector3(1, 0.58252, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j4367"]
+size = Vector3(0.583496, 1.39099, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xvqwx"]
+size = Vector3(0.615234, 1.64185, 0.992432)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vm0q2"]
 size = Vector3(0.618103, 1.41528, 0.574219)
@@ -322,6 +352,10 @@ size = Vector3(0.396912, 0.514648, 0.403809)
 
 [node name="Main" type="Node3D"]
 
+[node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_lp5jg")]
+transform = Transform3D(0.998861, 0, -0.0477166, 0, 1, 0, 0.0477166, 0, 0.998861, -0.676794, 0.465764, 5.83568)
+view = NodePath("../View")
+
 [node name="Environment" type="WorldEnvironment" parent="."]
 unique_name_in_owner = true
 environment = ExtResource("1_ml6ee")
@@ -348,24 +382,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Icon" type="TextureRect" parent="HUD/Control"]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 67.0
-offset_right = 313.0
-offset_bottom = 323.0
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("23_qwneo")
-
-[node name="x" type="Label" parent="HUD/Control"]
-layout_mode = 0
-offset_left = 112.0
-offset_top = 64.0
-offset_right = 144.0
-offset_bottom = 123.0
-text = "×"
-label_settings = ExtResource("24_nmh7s")
-
 [node name="Level Complete" type="Label" parent="HUD/Control"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -379,16 +395,6 @@ offset_bottom = 287.0
 grow_horizontal = 2
 text = "Level Complete!"
 label_settings = SubResource("LabelSettings_ri8jt")
-
-[node name="CoinsLabel" type="Label" parent="HUD/Control"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 144.0
-offset_top = 64.0
-offset_right = 368.0
-offset_bottom = 123.0
-text = "0"
-label_settings = ExtResource("24_nmh7s")
 
 [node name="PlayAgainButton" type="Button" parent="HUD/Control"]
 unique_name_in_owner = true
@@ -457,9 +463,6 @@ transform = Transform3D(1.12, 0, 0, 0, 1.12, 1.86265e-09, 0, -1.86265e-09, 1.12,
 transform = Transform3D(1, 0, 0, 0, 0.999999, 1.31316e-07, 0, -1.31316e-07, 0.999999, -0.0913591, 0.275437, -0.0320231)
 shape = SubResource("BoxShape3D_hks4p")
 
-[node name="flag" parent="block-snow-large2" instance=ExtResource("39_l01om")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30594, 1.54456, 5.94049)
-
 [node name="fence-broken2" parent="." instance=ExtResource("11_alohg")]
 transform = Transform3D(-0.418989, 0.0849362, 1.51115, 0.132351, 1.91362, -0.0406418, -1.65776, 0.131311, -0.38518, 2.04581, -0.0694729, 0.644108)
 
@@ -469,7 +472,16 @@ transform = Transform3D(0.0524889, -0.0642145, 1.5584, -0.149765, 1.91142, 0.056
 [node name="StaticBody3D" type="StaticBody3D" parent="fence-straight2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fence-straight2/StaticBody3D"]
-transform = Transform3D(0.980218, -0.00736117, 0.197771, 0.00426456, 0.999789, 0.0160789, -0.197866, -0.0149196, 0.980079, -2.16862, 1.13272, 1.02398)
+transform = Transform3D(0.979239, -0.0559032, 0.194832, 0.0522192, 0.998255, 0.0240169, -0.195857, -0.0133472, 0.980505, -1.21618, 1.25484, 0.836177)
+shape = SubResource("BoxShape3D_r4222")
+
+[node name="fence-straight35" parent="." instance=ExtResource("12_g5pla")]
+transform = Transform3D(-1.70768, -0.165401, -0.0516719, -0.149765, 1.91142, 0.0561681, 0.051232, 0.0743886, -1.55814, 0.903415, -0.198372, -3.64891)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fence-straight35"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fence-straight35/StaticBody3D"]
+transform = Transform3D(0.979239, -0.0559025, 0.194832, 0.0522189, 0.998252, 0.0240168, -0.195857, -0.0133471, 0.980505, -1.21618, 1.25484, 0.836177)
 shape = SubResource("BoxShape3D_r4222")
 
 [node name="fence-broken3" parent="." instance=ExtResource("11_alohg")]
@@ -561,6 +573,12 @@ shape = SubResource("BoxShape3D_u8tn5")
 
 [node name="fence-broken16" parent="." instance=ExtResource("11_alohg")]
 transform = Transform3D(0.1564, -0.269797, -1.53796, -0.00989004, 1.90061, -0.220939, 1.70782, 0.0357141, 0.139564, -2.52921, 0.0202792, 14.2377)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fence-broken16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fence-broken16/StaticBody3D"]
+transform = Transform3D(1, 8.3819e-08, 4.84288e-07, 0, 0.999985, 3.27476e-07, 2.23517e-08, -2.53785e-08, 0.999994, -0.425782, 0.837178, 0.431092)
+shape = SubResource("BoxShape3D_3hj4o")
 
 [node name="fence-broken17" parent="." instance=ExtResource("11_alohg")]
 transform = Transform3D(0.228075, -0.263689, -1.53122, -0.0838915, 1.89741, -0.226044, 1.69769, 0.129185, 0.194541, -2.67148, 0.0202793, 12.3533)
@@ -1096,7 +1114,7 @@ transform = Transform3D(1.46035, -0.414054, -2.43964, -2.36297e-15, 3.45972, -0.
 [node name="StaticBody3D" type="StaticBody3D" parent="tree-pine-snow-small34"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-snow-small34/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00562775, 0.69093, -0.00518632)
+transform = Transform3D(0.999999, -4.47035e-08, 9.53674e-07, -8.19564e-08, 0.999995, -1.71363e-07, 7.45058e-07, -1.2666e-07, 0.999998, -0.00562775, 0.69093, -0.00518632)
 shape = SubResource("BoxShape3D_sh0wn")
 
 [node name="tree-pine-snow-small13" parent="." instance=ExtResource("13_xd0iv")]
@@ -1325,7 +1343,7 @@ transform = Transform3D(5.39136, 0.660893, -0.0697036, -0.587403, 6.06588, -0.63
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-corner-low3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-corner-low3/StaticBody3D"]
-transform = Transform3D(0.712124, 0, 0.702054, 0, 1, 0, -0.702054, 0, 0.712124, 0.0562181, 0.233992, 0.0452417)
+transform = Transform3D(0.712121, 1.29546e-07, 0.702041, -4.54485e-07, 0.999997, 4.24683e-07, -0.70205, 1.49012e-07, 0.71212, 0.0562183, 0.617322, 0.0452418)
 shape = SubResource("BoxShape3D_3vqsm")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="block-snow-corner-low3/StaticBody3D"]
@@ -1370,7 +1388,7 @@ transform = Transform3D(0.541054, 0, 0, 0, 1.07507, 0.0216882, 0, -0.0343115, 0.
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-edge4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-edge4/StaticBody3D"]
-transform = Transform3D(0.977596, -0.00424547, 0.210446, 0.00424547, 0.999991, 0.000451783, -0.210446, 0.000452593, 0.977605, -0.23344, 0.654753, 0.0710735)
+transform = Transform3D(0.950396, -0.0062735, 0.310978, 0.00627358, 0.99998, 0.00100029, -0.310978, 0.00100108, 0.950416, -0.657137, 1.67672, -1.4018)
 shape = SubResource("BoxShape3D_vbxe5")
 
 [node name="block-snow-edge3" parent="." instance=ExtResource("15_5hk5m")]
@@ -1383,10 +1401,6 @@ transform = Transform3D(-0.0355797, 0.229768, -0.972595, 0, 0.973211, 0.229914, 
 transform = Transform3D(-0.0192506, 0.0342897, -0.679122, 0, 1.07507, 0.0216882, 0.540712, 0.00122079, -0.0241783, 5.43589, -0.462383, 3.70187)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block-snow-edge6"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="block-snow-edge6/StaticBody3D"]
-transform = Transform3D(0.977596, -0.00424547, 0.210446, 0.00424547, 0.999991, 0.000451783, -0.210446, 0.000452593, 0.977605, -0.23344, 0.654753, 0.0710735)
-shape = SubResource("BoxShape3D_vbxe5")
 
 [node name="block-snow-edge7" parent="." instance=ExtResource("15_5hk5m")]
 transform = Transform3D(-0.919185, -0.196828, 0.341112, -0.169416, 0.979533, 0.108687, -0.355523, 0.0421134, -0.933718, 6.09897, -0.532768, 3.6431)
@@ -1557,7 +1571,7 @@ transform = Transform3D(2.71407, 0, 0, 0, 0.999122, 0, 0, 0, 4.33619, 2.66807, 0
 transform = Transform3D(0.834884, 0, 0, 0, 2.77928, 0, 0, 0, 3.21236, 0.776088, 1.37917, 32.6759)
 
 [node name="DitherObstacle" parent="wall-window-barred-small2" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small2"]
 
@@ -1569,7 +1583,7 @@ shape = SubResource("BoxShape3D_ybbuu")
 transform = Transform3D(0.834884, 0, 0, 0, 2.77928, 0, 0, 0, 3.2841, 0.776088, 1.37917, 29.208)
 
 [node name="DitherObstacle" parent="wall-window-barred-small4" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small4"]
 
@@ -1581,7 +1595,7 @@ shape = SubResource("BoxShape3D_roh1v")
 transform = Transform3D(0.9876, 0, 0.0286744, 0, 2.12763, 0, -0.0184283, 0, 1.5367, 2.31129, 1.39275, 26.1988)
 
 [node name="DitherObstacle" parent="wall-doorway-sliding2" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-doorway-sliding2"]
 
@@ -3049,7 +3063,7 @@ transform = Transform3D(-0.347181, 0, -0.937798, 0, 1, 0, 0.937798, 0, -0.347181
 transform = Transform3D(-0.835089, 0, 0.0159091, 0, 2.77928, 0, -0.00392065, 0, -3.3886, 4.52941, 1.37917, 29.1412)
 
 [node name="DitherObstacle" parent="wall-window-barred-small3" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small3"]
 
@@ -3061,7 +3075,7 @@ shape = SubResource("BoxShape3D_cjunh")
 transform = Transform3D(-0.0147669, 0, -2.12547, 0, 2.73597, 0, 0.828599, 0, -0.0378793, 3.42468, 1.37917, 24.9299)
 
 [node name="DitherObstacle" parent="wall-window-barred-small5" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small5"]
 
@@ -3073,26 +3087,13 @@ shape = SubResource("BoxShape3D_yjo4a")
 transform = Transform3D(-0.999989, 0, 0.0181475, 0, 2.75337, 0, -0.00469483, 0, -3.86538, 4.53009, 1.39025, 32.2921)
 
 [node name="DitherObstacle" parent="wall3" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wall3/StaticBody3D"]
 transform = Transform3D(1, 0, -2.03028e-07, 0, 1, 0, 1.74623e-09, 0, 1, 0.0202322, 0.245667, 1.90735e-06)
 shape = SubResource("BoxShape3D_obbrj")
-
-[node name="wall4" parent="." instance=ExtResource("41_g7c7a")]
-transform = Transform3D(-0.974863, 0, 0.0944943, 0, 8.71139, 0, -0.0045769, 0, -20.127, 8.91745, 0.671522, 56.6139)
-script = ExtResource("39_2ubgb")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="wall4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall4/StaticBody3D"]
-transform = Transform3D(1, 0, 1.05798e-06, 0, 1, 0, 4.36557e-11, 0, 1, -0.026124, 0.2276, -4.76837e-07)
-shape = SubResource("BoxShape3D_uagnl")
-
-[node name="DitherObstacle" parent="wall4" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
 
 [node name="wall5" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-1.01861, 0, 0.0963799, 0, 9.10042, 0, -0.00478227, 0, -20.5286, -3.84524, 0.671522, 56.6139)
@@ -3104,7 +3105,19 @@ transform = Transform3D(1, 0, 1.02818e-06, 0, 1, 0, 4.36557e-11, 0, 1, 0.0367122
 shape = SubResource("BoxShape3D_atfl0")
 
 [node name="DitherObstacle" parent="wall5" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="wall14" parent="." instance=ExtResource("41_g7c7a")]
+transform = Transform3D(1.01862, 0, 0, 0, 9.10042, 0, 0, 0, 20.5288, 8.96001, 0.671522, 56.6139)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall14/StaticBody3D"]
+transform = Transform3D(1, 0, 1.02818e-06, 0, 1, 0, 4.36557e-11, 0, 1, 0.0367122, 0.253143, 0)
+shape = SubResource("BoxShape3D_atfl0")
+
+[node name="DitherObstacle" parent="wall14" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
 
 [node name="column-rounded2" parent="." instance=ExtResource("42_hbfti")]
 transform = Transform3D(-0.691437, 0, 0.722436, 0, 2.83698, 0, -0.722436, 0, -0.691437, 0.855989, 1.33592, 30.9629)
@@ -3149,7 +3162,7 @@ transform = Transform3D(-0.707255, 0, 0.706959, 0, 2.75899, 0, -0.706959, 0, -0.
 transform = Transform3D(0.00302247, 0, 1.36113, 0, 5.62643, 0, -1.001, 0, 0.00410987, 1.56652, 1.39025, 27.4481)
 
 [node name="DitherObstacle" parent="wall-low2" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-low2"]
 
@@ -3161,7 +3174,7 @@ shape = SubResource("BoxShape3D_nxg6q")
 transform = Transform3D(0.996926, 0, 0.0153903, 0, 5.62643, 0, -0.00711659, 0, 2.15595, 4.53937, 1.287, 26.0953)
 
 [node name="DitherObstacle" parent="wall-low3" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-low3"]
 
@@ -3176,7 +3189,13 @@ transform = Transform3D(1.00766, 0, 0.0581475, 0, 1.00726, 0, -0.0252073, 0, 2.3
 transform = Transform3D(1.13925, 0.0152641, 1.27989, 1.25512, 0.139637, -1.16083, -0.0392504, 4.90823, 0.0290447, 3.44805, 4.04997, 24.9824)
 
 [node name="DitherObstacle" parent="wall-round-low2" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall-round-low2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall-round-low2/StaticBody3D"]
+transform = Transform3D(0.742238, -0.00602669, 0.670109, 0.00190428, 0.999974, 0.00688413, -0.670133, -0.00383361, 0.742231, 0.25797, 0.242967, -0.171983)
+shape = SubResource("BoxShape3D_vho2h")
 
 [node name="wall-round-low3" parent="." instance=ExtResource("46_b0j7q")]
 transform = Transform3D(1.7004, 0.0424999, 2.12603, 1.87385, 0.245185, -1.92866, -0.0388978, 13.6692, 0.0279841, 2.64338, 4.04997, 27.4092)
@@ -3194,7 +3213,7 @@ transform = Transform3D(-0.469091, 0, 8.16884e-08, 0, 1, 0, -4.10092e-08, 0, -0.
 transform = Transform3D(-0.834884, 0, 2.80833e-07, 0, 2.77928, 0, -7.29879e-08, 0, -3.21236, 4.42166, 1.37917, 35.7378)
 
 [node name="DitherObstacle" parent="wall-window-barred-small6" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small6"]
 
@@ -3206,7 +3225,7 @@ shape = SubResource("BoxShape3D_ltc6x")
 transform = Transform3D(-0.834884, 0, 2.87105e-07, 0, 2.77928, 0, -7.29879e-08, 0, -3.2841, 4.47256, 1.37917, 39.2053)
 
 [node name="DitherObstacle" parent="wall-window-barred-small7" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small7"]
 
@@ -3218,7 +3237,7 @@ shape = SubResource("BoxShape3D_1tyfb")
 transform = Transform3D(0.835098, 0, 0, 0, 2.77928, 0, 0, 0, 3.38864, 0.720618, 1.37917, 39.3272)
 
 [node name="DitherObstacle" parent="wall-window-barred-small8" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall-window-barred-small8"]
 
@@ -3239,19 +3258,19 @@ shape = SubResource("BoxShape3D_6e33q")
 transform = Transform3D(-0.0230067, 0, -0.688255, 0, 2.75337, 0, 0.976981, 0, -0.0162076, 1.04786, 1.39025, 40.9705)
 
 [node name="DitherObstacle" parent="wall7" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall8" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-0.0230067, 0, -0.688255, 0, 2.75337, 0, 0.976981, 0, -0.0162076, 4.06965, 1.39025, 40.9705)
 
 [node name="DitherObstacle" parent="wall8" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall9" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-0.463615, 0, 0.166314, 0, 3.01237, 0, -0.0170567, 0, -4.52055, 3.71358, 1.39025, 43.3575)
 
 [node name="DitherObstacle" parent="wall9" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall9"]
 
@@ -3269,7 +3288,7 @@ transform = Transform3D(1, 0, -1.04308e-07, 0, 1, 0, 0, 0, 1, -0.022583, 0.25189
 shape = SubResource("BoxShape3D_h2fdx")
 
 [node name="DitherObstacle" parent="wall12" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall13" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.0228e-08, 0, -5.10603, 0, 9.03492, 0, 0.462763, 0, -2.23192e-07, -1.14008, 0.671522, 46.0282)
@@ -3281,7 +3300,7 @@ transform = Transform3D(0.999988, 0, 2.08616e-07, 0, 1, 0, 1.11759e-08, 0, 0.999
 shape = SubResource("BoxShape3D_qxskb")
 
 [node name="DitherObstacle" parent="wall13" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall16" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.02423e-08, 0, -5.30263, 0, 9.12599, 0, 0.46309, 0, -2.31785e-07, 6.24924, 0.671522, 66.8818)
@@ -3293,7 +3312,7 @@ transform = Transform3D(1, 0, -1.04308e-07, 0, 1, 0, 0, 0, 1, -0.022583, 0.25189
 shape = SubResource("BoxShape3D_h2fdx")
 
 [node name="DitherObstacle" parent="wall16" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall17" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.0228e-08, 0, -5.10603, 0, 9.03492, 0, 0.462763, 0, -2.23192e-07, -1.22519, 0.671522, 66.8562)
@@ -3305,25 +3324,31 @@ transform = Transform3D(0.999988, 0, 2.08616e-07, 0, 1, 0, 1.11759e-08, 0, 0.999
 shape = SubResource("BoxShape3D_qxskb")
 
 [node name="DitherObstacle" parent="wall17" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall11" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-0.0428899, -2.36944, 0.18421, -1.12046, 0.0899447, -0.05514, 0.0101629, -0.0832619, -5.30175, 3.76361, 4.46417, 43.3941)
 
 [node name="DitherObstacle" parent="wall11" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall11/StaticBody3D"]
+transform = Transform3D(1, -1.78535e-06, 0, -3.0268e-09, 1, 0, 3.49246e-10, -1.30385e-08, 1, -0.300539, 0.607177, 1.2609)
+shape = SubResource("BoxShape3D_2di3x")
 
 [node name="wall15" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.03134e-08, -2.23307, -2.13111e-14, 2.03134e-08, 4.26669e-15, -5.57683, 0.464716, -9.76105e-08, 2.43771e-07, 3.67268, 6.9297, 46.0059)
 
 [node name="DitherObstacle" parent="wall15" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall18" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.03134e-08, -2.4462, -2.24105e-14, 2.03134e-08, 4.67392e-15, -5.86452, 0.464716, -1.06927e-07, 2.56346e-07, 3.67268, 6.82175, 66.8446)
 
 [node name="DitherObstacle" parent="wall18" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall19" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.01193e-08, 0.0200594, 4.01371, -2.05057e-08, -2.10878, 0.0381798, 0.464716, -9.21818e-08, 1.75453e-07, 2.67545, 11.718, 66.8446)
@@ -3347,7 +3372,7 @@ transform = Transform3D(-1.95987e-08, 0.0505111, 3.32779, -2.10038e-08, -1.4596,
 transform = Transform3D(-0.586908, 0, 0.167478, 0, 3.15529, 0, -0.0215927, 0, -4.55219, 1.50551, 1.39025, 43.3575)
 
 [node name="DitherObstacle" parent="wall10" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="wall10"]
 
@@ -3370,26 +3395,50 @@ transform = Transform3D(0.717555, 0, -0.696502, 0, 2.75899, 0, 0.696502, 0, 0.71
 [node name="column-rounded19" parent="." instance=ExtResource("42_hbfti")]
 transform = Transform3D(-0.0520279, 0, -2.09121, 0, 9.13143, 0, 2.62371, 0, -0.0414685, -3.73686, 0.669152, 46.077)
 
+[node name="DitherObstacle" parent="column-rounded19" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
+
 [node name="column-rounded20" parent="." instance=ExtResource("42_hbfti")]
 transform = Transform3D(-1.91229, 0, 0.661382, 0, 9.64141, 0, -0.458537, 0, -2.75824, 9.05495, 0.669152, 46.2763)
+
+[node name="DitherObstacle" parent="column-rounded20" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
 
 [node name="column-rounded21" parent="." instance=ExtResource("42_hbfti")]
 transform = Transform3D(0.00803903, 0, 1.09707, 0, 9.6414, 0, -1.29738, 0, 0.00679785, 8.91408, 0.669152, 66.7975)
 
+[node name="DitherObstacle" parent="column-rounded21" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
+
 [node name="column-rounded22" parent="." instance=ExtResource("42_hbfti")]
 transform = Transform3D(1.23752, 0, 0.329463, 0, 9.64141, 0, -0.38962, 0, 1.04645, -3.90178, 0.669152, 66.8964)
+
+[node name="DitherObstacle" parent="column-rounded22" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
 
 [node name="wall-round-low5" parent="." instance=ExtResource("46_b0j7q")]
 transform = Transform3D(-1.69938, -0.224371, -2.12658, 1.87416, 0.247447, -1.92826, 0.0618292, -13.6674, -9.29557e-08, 2.63187, 4.04997, 41.0313)
 
 [node name="DitherObstacle" parent="wall-round-low5" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="wall-round-low6" parent="." instance=ExtResource("46_b0j7q")]
+transform = Transform3D(-6.39597, -0.788421, -7.82184, 7.05379, 0.869508, -7.09239, 0.232707, -48.0261, -3.41903e-07, 2.90596, 10.014, 68.2441)
+
+[node name="DitherObstacle" parent="wall-round-low6" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
 
 [node name="wall-round-low4" parent="." instance=ExtResource("46_b0j7q")]
 transform = Transform3D(3.1893, 0.076614, 3.42025, 3.29826, 0.371593, -3.30627, -0.07053, 20.8415, 0.0463757, 2.0058, 6.14322, 70.8)
 
 [node name="DitherObstacle" parent="wall-round-low4" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall-round-low4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall-round-low4/StaticBody3D"]
+transform = Transform3D(0.715013, -0.00251976, 0.699107, 0.000591344, 0.999995, 0.00299995, -0.699111, -0.00173153, 0.715011, 0.201345, 0.245239, -0.10528)
+shape = SubResource("BoxShape3D_cuhj5")
 
 [node name="pipe-section2" parent="." instance=ExtResource("43_d5p3f")]
 transform = Transform3D(1.24449, 0, 0, 0, 0.923228, 0, 0, 0, 1.18635, 2.43829, 0.114022, 25.0859)
@@ -3458,7 +3507,7 @@ script = ExtResource("24_ek81a")
 shape = SubResource("BoxShape3D_4x8xo")
 
 [node name="DitherObstacle" parent="door-rotate-large2" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="platform-fortified2" parent="." instance=ExtResource("33_rk1q6")]
 transform = Transform3D(-0.469356, 0.0940296, -0.420199, 0.355753, 0.0176325, -0.566674, -0.0578291, -0.654697, -0.0756121, 3.4219, 3.79368, 40.9185)
@@ -4153,10 +4202,6 @@ transform = Transform3D(1, 7.45058e-08, 0, -4.65661e-10, 1, 0, 0, 0, 1, -0.17841
 transform = Transform3D(1, 0, 3.72529e-09, -1.12224e-07, 1, 1.16706e-08, 0, 0, 1, 2.75562, -1.80594, -3.65806)
 shape = SubResource("BoxShape3D_71lb1")
 
-[node name="Player" parent="." node_paths=PackedStringArray("view") instance=ExtResource("2_lp5jg")]
-transform = Transform3D(0.998861, 0, -0.0477166, 0, 1, 0, 0.0477166, 0, 0.998861, -0.907167, 0.358369, 2.67994)
-view = NodePath("../View")
-
 [node name="platform-falling11" parent="." instance=ExtResource("33_7phwd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26335, 2.35993, 61.1368)
 
@@ -4209,25 +4254,25 @@ transform = Transform3D(-0.00475221, -22.1033, 0, 1.00473, -0.104545, 0, 0, 0, 1
 transform = Transform3D(1, 0, 0, 0, 7.9576, 0, 0, 0, 3.70136, 1.42355, 0.501547, 45.7649)
 
 [node name="DitherObstacle" parent="column-low13" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="column-low14" parent="." instance=ExtResource("51_2qbty")]
 transform = Transform3D(1, 0, 0, 0, 7.94862, 0, 0, 0, 3.70136, 3.57357, 0.501547, 45.7649)
 
 [node name="DitherObstacle" parent="column-low14" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="column-low15" parent="." instance=ExtResource("51_2qbty")]
 transform = Transform3D(-4.37114e-08, 4.41301, 0, -1, -1.92899e-07, 0, 0, 0, 3.70136, 1.37658, 1.31369, 45.7649)
 
 [node name="DitherObstacle" parent="column-low15" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="column-low16" parent="." instance=ExtResource("51_2qbty")]
 transform = Transform3D(-7.84084e-08, 4.37744, 0, -1.79378, -1.91344e-07, 0, 0, 0, 3.67153, 1.37658, 4.26459, 45.7649)
 
 [node name="DitherObstacle" parent="column-low16" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="platform-large6" parent="." instance=ExtResource("16_t2aje")]
 transform = Transform3D(0.432899, 0, -0.0326235, 0, 1, 0, 0.0150719, 0, 0.937023, 2.19973, 0.890246, 69.3385)
@@ -4266,79 +4311,121 @@ transform = Transform3D(-1.4246e-09, 0.999521, 0.011514, 4.60223e-08, 0.0309397,
 transform = Transform3D(0.462398, 0, -0.367117, 0, 2.75337, 0, 0.0376505, 0, 4.50869, 1.17855, 1.39025, 69.4077)
 
 [node name="DitherObstacle" parent="wall25" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall25/StaticBody3D"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 1.02445e-08, 0, 1, -0.168515, 0.279816, -0.0510874)
+shape = SubResource("BoxShape3D_sxang")
 
 [node name="wall26" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(0.000742676, 2.22415, -0.390945, -0.462809, 0.0022025, -0.0325534, -0.00327841, 0.192944, 4.50697, 1.16318, 4.08254, 69.4095)
 
 [node name="DitherObstacle" parent="wall26" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall26/StaticBody3D"]
+transform = Transform3D(1, -1.25961e-07, 1.11759e-07, 6.40284e-10, 1, -1.93715e-07, -6.40284e-10, 7.45058e-09, 1, -0.20453, 0.505372, 9.53674e-07)
+shape = SubResource("BoxShape3D_gthel")
 
 [node name="wall27" parent="." instance=ExtResource("41_g7c7a")]
-transform = Transform3D(0.585368, 0, -0.369686, 0, 2.78289, 0, 0.0476632, 0, 4.54024, 3.38444, 1.39025, 69.5058)
+transform = Transform3D(0.585368, 0, -0.369686, 0, 2.78289, 0, 0.0476632, 0, 4.54024, 3.38444, 1.3822, 69.5058)
 
 [node name="DitherObstacle" parent="wall27" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall27/StaticBody3D"]
+transform = Transform3D(0.999998, 0, -5.96046e-08, 0, 1, 0, -5.12227e-08, 0, 1, 0.188478, 0.249634, -0.0386305)
+shape = SubResource("BoxShape3D_bja25")
 
 [node name="wall28" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(0.588085, 0, 0, 0, 4.80504, 0, 0, 0, 9.25065, 5.20798, 1.39025, 76.101)
 
 [node name="DitherObstacle" parent="wall28" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall28/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.143557, 0.271423, 0.000676155)
+shape = SubResource("BoxShape3D_5wr4g")
 
 [node name="wall30" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(0.587305, 0, 0, 0, 4.85272, 0, 0, 0, 9.23839, -0.872801, 1.39025, 76.101)
 
 [node name="DitherObstacle" parent="wall30" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall30/StaticBody3D"]
+transform = Transform3D(-0.22, 0, 0, 0, 1.61499, 0, 0, 0, 0.97, 0, 0.44515, 0)
+shape = SubResource("BoxShape3D_iwdue")
 
 [node name="wall29" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.56719e-08, 0, 1.83756, 0, 4.83082, 0, -0.587305, 0, -8.03222e-08, 0.0832253, 1.39025, 71.6621)
 
 [node name="DitherObstacle" parent="wall29" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall29/StaticBody3D"]
+transform = Transform3D(0.999992, 0, -1.13687e-13, 0, 1, 0, -1.02141e-13, 0, 1, 0.208252, 0.195496, 0)
+shape = SubResource("BoxShape3D_j4367")
 
 [node name="wall33" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.56719e-08, 0, 2.37482, 0, 2.16256, 0, -0.587305, 0, -1.03807e-07, 2.11164, 4.05835, 71.6621)
 
 [node name="DitherObstacle" parent="wall33" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall34" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.56719e-08, 0, 4.29033, 0, 0.726218, 0, -0.587305, 0, -1.87536e-07, 2.11164, 6.17043, 71.6621)
 
 [node name="DitherObstacle" parent="wall34" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall35" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.56719e-08, 0, 4.29033, 0, 0.726218, 0, -0.587305, 0, -1.87536e-07, 2.11164, 6.17043, 80.6621)
 
 [node name="DitherObstacle" parent="wall35" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall31" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.56719e-08, 0, 2.08688, 0, 4.80685, 0, -0.587305, 0, -9.12206e-08, 4.22365, 1.39025, 71.6621)
 
 [node name="DitherObstacle" parent="wall31" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="wall32" parent="." instance=ExtResource("41_g7c7a")]
 transform = Transform3D(-2.56719e-08, 0, 6.2278, 0, 4.80221, 0, -0.587305, 0, -2.72226e-07, 2.13201, 1.39025, 80.5435)
 
 [node name="DitherObstacle" parent="wall32" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall32"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall32/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.192337, 0.320923, 0.00378415)
+shape = SubResource("BoxShape3D_xvqwx")
 
 [node name="column-low18" parent="." instance=ExtResource("51_2qbty")]
 transform = Transform3D(-0.999011, 0, 0.164549, 0, 7.23998, 0, -0.0444564, 0, -3.6977, 3.57334, 0.501547, 67.1044)
 
 [node name="DitherObstacle" parent="column-low18" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="column-low19" parent="." instance=ExtResource("51_2qbty")]
 transform = Transform3D(-0.999011, 0, 0.164549, 0, 7.23998, 0, -0.0444564, 0, -3.6977, 1.42545, 0.501547, 67.0089)
 
 [node name="DitherObstacle" parent="column-low19" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="column-low20" parent="." instance=ExtResource("51_2qbty")]
 transform = Transform3D(4.36682e-08, -4.40865, 0.164549, -1, -1.92899e-07, 4.17059e-16, 1.94325e-09, -0.196186, -3.6977, 3.62026, 1.31369, 67.1065)
@@ -4347,7 +4434,7 @@ transform = Transform3D(4.36682e-08, -4.40865, 0.164549, -1, -1.92899e-07, 4.170
 transform = Transform3D(5.799e-08, -4.39423, 0.164011, -1.32797, -1.92268e-07, -4.83949e-15, 2.58058e-09, -0.195545, -3.68561, 3.62026, 3.95659, 67.1065)
 
 [node name="DitherObstacle" parent="column-low21" instance=ExtResource("40_yu8ng")]
-max_distance_dither = 20.0
+max_distance_dither = 15.0
 
 [node name="tree-pine-small2" parent="." instance=ExtResource("52_41xe7")]
 transform = Transform3D(1, 0, 0, 0, 1.16124, -0.0791203, 0, 0.0921668, 0.996865, 0.434321, 0.671079, 52.4804)
@@ -5358,6 +5445,9 @@ transform = Transform3D(3.65763, 1.60794, -1.12544e-15, -0.944041, 5.95517, -1.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0169983, 0.686401, 0.0366211)
 shape = SubResource("BoxShape3D_vm0q2")
 
+[node name="DitherObstacle" parent="tree-pine-small3" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
+
 [node name="block-grass-overhang-corner17" parent="." instance=ExtResource("48_jx4so")]
 transform = Transform3D(0.0760744, 0, 2.44951, 0, 1.58701, 0, -1.93537, 0, 0.0962839, -2.46367, 0.649469, 65.6897)
 
@@ -5393,6 +5483,9 @@ transform = Transform3D(-1.2345, 0.642597, 4.15926, -0.774673, 5.47569, -0.90154
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tree-pine-small4/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0169983, 0.686401, 0.0366211)
 shape = SubResource("BoxShape3D_vm0q2")
+
+[node name="DitherObstacle" parent="tree-pine-small4" instance=ExtResource("40_yu8ng")]
+max_distance_dither = 15.0
 
 [node name="block-grass-overhang-edge2" parent="." instance=ExtResource("53_m3cef")]
 transform = Transform3D(0.194816, 0, -0.98084, 0, 1, 0, 0.98084, 0, 0.194816, -1.66257, 0.772992, 47.01)
@@ -5647,7 +5740,7 @@ transform = Transform3D(-0.287628, 0, 0.957742, 0, 1, 0, -0.957742, 0, -0.287628
 size = Vector3(11.9857, 1.13575, 17.3513)
 
 [node name="FogVolume18" type="FogVolume" parent="."]
-transform = Transform3D(0.0399224, 0, 0.999203, 0, 1, 0, -0.999203, 0, 0.0399224, 2.20215, 1.0037, 74.9333)
+transform = Transform3D(0.0399224, 0, 0.999203, 0, 1, 0, -0.999203, 0, 0.0399224, 2.20215, 1.0037, 79.819)
 size = Vector3(2.78395, 0.803957, 2.82708)
 material = SubResource("FogMaterial_hp0un")
 
@@ -5656,11 +5749,11 @@ transform = Transform3D(-0.287628, 0, 0.957742, 0, 1, 0, -0.957742, 0, -0.287628
 size = Vector3(20.0648, 1.13575, 31.5445)
 
 [node name="FogVolume6" type="FogVolume" parent="."]
-transform = Transform3D(-0.00481711, 0, 0.999988, 0, 1, 0, -0.999988, 0, -0.00481711, 0.615538, 1.23189, -3.53034)
+transform = Transform3D(-0.162878, 0, -0.986646, 0, 1, 0, 0.986646, 0, -0.162878, 1.20697, 1.23189, -3.75932)
 size = Vector3(6.12774, 2.93079, 3.96455)
 
 [node name="FogVolume20" type="FogVolume" parent="."]
-transform = Transform3D(-0.00481711, 0, 0.999988, 0, 1, 0, -0.999988, 0, -0.00481711, 1.04766, 1.23189, -3.67468)
+transform = Transform3D(-0.162878, 0, -0.986646, 0, 1, 0, 0.986646, 0, -0.162878, 0.756765, 1.23189, -3.68946)
 size = Vector3(6.12774, 2.93079, 3.96455)
 
 [node name="FogVolume3" type="FogVolume" parent="."]
@@ -5714,10 +5807,10 @@ shape = SubResource("BoxShape3D_qqdr5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499696, 15.2633)
 
 [node name="door-rotate2" parent="." instance=ExtResource("62_d5lpj")]
-transform = Transform3D(-0.909957, 0.243502, -0.905689, -0.401865, 0.37233, 1.99016, 0.131819, 2.81599, -0.184823, 0.719267, 1.27184, 73.6395)
+transform = Transform3D(-0.921253, 0.0962995, -0.881731, -0.404719, 0.111868, 2.00213, 0.0438789, 3.05362, -0.0455413, 0.719267, 1.32281, 73.6395)
 
 [node name="door-rotate3" parent="." instance=ExtResource("62_d5lpj")]
-transform = Transform3D(-0.900632, -0.112358, 0.963672, 0.440901, 0.00889558, 1.97116, -0.0368991, 2.84869, 0.0318534, 3.40674, 1.37327, 73.5156)
+transform = Transform3D(-0.897468, -0.123083, 0.965008, 0.439352, 0.00974474, 1.97389, -0.0367695, 3.12062, 0.0318976, 3.40674, 1.37327, 73.5156)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19574, 0.459667, 74.7518)
@@ -5784,6 +5877,11 @@ transform = Transform3D(1, 0, 0, 0, 1, -5.36442e-07, 0, 2.08616e-07, 1, 0, 1.533
 v_offset = 0.525
 current = true
 fov = 29.3
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="View/Camera"]
+stream = ExtResource("66_w24od")
+volume_db = -5.89
+autoplay = true
 
 [node name="plant3" parent="." instance=ExtResource("65_aeijv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1748, 0.950996, 33.5301)
@@ -5906,6 +6004,67 @@ transform = Transform3D(0.0335942, -0.389672, -0.920341, 0.0226578, 0.920921, -0
 transform = Transform3D(-0.0558705, 0.00130865, -0.998437, 0.0449794, 0.998987, -0.00120762, 0.997424, -0.0449766, -0.0558728, -6.19436, 0.698104, 24.9476)
 
 [node name="flag" parent="." instance=ExtResource("39_l01om")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59112, 0.114022, 4.60621)
+transform = Transform3D(2.47551, 0, 0, 0, 0.121955, 0, 0, 0, 3.56104, 1.88034, 0.221757, 74.5845)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.221994, -0.640242, 0.735397, 0.0567807, 0.761425, 0.645761, -0.973393, -0.101599, 0.205386, 5.08345, 3.56192, 39.3964)
+light_color = Color(0.968627, 0, 0.196078, 1)
+light_energy = 16.0
+shadow_enabled = true
+spot_attenuation = -2.44
+spot_angle = 9.46
+
+[node name="plant2" parent="." instance=ExtResource("65_aeijv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88509, 0.114022, 24.7168)
+
+[node name="plant4" parent="." instance=ExtResource("65_aeijv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89707, 0.158792, 24.8076)
+
+[node name="plant5" parent="." instance=ExtResource("65_aeijv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.49689, 0.175478, 24.3872)
+
+[node name="mushrooms2" parent="." instance=ExtResource("69_8qnlb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99362, 2.31728, 49.5734)
+
+[node name="mushrooms3" parent="." instance=ExtResource("69_8qnlb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7126, 1.9415, 47.2568)
+
+[node name="mushrooms4" parent="." instance=ExtResource("69_8qnlb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31314, 1.94813, 47.8087)
+
+[node name="mushrooms5" parent="." instance=ExtResource("69_8qnlb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08593, 1.59563, 49.222)
+
+[node name="mushrooms6" parent="." instance=ExtResource("69_8qnlb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38312, 1.39293, 48.0544)
+
+[node name="mushrooms7" parent="." instance=ExtResource("69_8qnlb")]
+transform = Transform3D(0.45122, 0, -0.892413, 0, 1, 0, 0.892413, 0, 0.45122, -1.59045, 2.20988, 65.3024)
+
+[node name="plant6" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.24541, 2.34095, 48.7914)
+
+[node name="plant7" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3329, 2.3262, 50.3105)
+
+[node name="plant8" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.50831, 2.31404, 49.8329)
+
+[node name="plant9" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.81291, 1.93822, 47.7507)
+
+[node name="plant10" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.51794, 2.64485, 46.8808)
+
+[node name="plant11" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94556, 1.20899, 49.1935)
+
+[node name="plant12" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.05467, 2.25764, 48.0135)
+
+[node name="plant13" parent="." instance=ExtResource("70_3ob8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22517, 2.31308, 64.9541)
+
+[connection signal="coin_collected" from="Player" to="HUD" method="_on_player_coin_collected"]
+[connection signal="reached_goal" from="Player" to="HUD" method="_on_player_reached_goal"]
 [connection signal="pressed" from="HUD/Control/PlayAgainButton" to="HUD" method="_on_play_again_button_pressed"]
